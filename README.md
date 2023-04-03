@@ -37,16 +37,16 @@ The following are implemented in this file:
         g. The integer currentReaderCounter, which contains the total number of readers
         h. The integer segmentRequested, which indicates the requested number of segments
         i. The integer lineRequested, which indicates the requested number of the line
-        j. The integer currentSegment, indicating the current number of the segment in the shared memory
-    2. char*** start(char* argv, int linesPerSegment, int* numberOfLines, int* lengthOfLine)
+        j. The integer currentSegment, indicating the current number of the segment in the shared memory 
+2. char*** start(char* argv, int linesPerSegment, int* numberOfLines, int* lengthOfLine)
         a. Returns to the parent the 3x3 array char*** arrayOfSegments[segment][linesOfSegment][line] which splits the input file into segments for a cleaner and clearer implementation
         b. After the array is created and the input file is copied to it then it is deleted to avoid overloading the memory with unnecessary data
         c. Returns to the parent the variable numberOfLines which defines the maximum number of lines in the input file
         d. Returns to the parent the variable lengthOfLine which defines the maximum number of characters per line in the input file
 
-    3. int random_segment(int min, int max)
+3. int random_segment(int min, int max)
         a. Returns an integer in the range [min, max].
-    4. int random_line(int min, int max)
+4. int random_line(int min, int max)
         a. Returns an integer in the range [min,max)
 
 

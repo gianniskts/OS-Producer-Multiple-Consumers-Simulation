@@ -13,18 +13,18 @@ Multiple forked children ask for data from the parent process through a shared m
 
 The task is implemented in C++. The STL library has not been used, as it is mainly using C libraries.
 
-##Execution
+## Execution
     1. In terminal open the current directory of the task with the appropriate cd's and execute the following commands
     2. make
     3. ./parent <file> <N> <Partition_Location> <Number_of_questions_per_field>
 Indicative execution: ./parent text.txt 10 10 5
 
-##Output
+## Output
     1. For each child process a log file named child_N is generated, where N is the child ID number.
     2. The parent process produces a log file named parent_file.txt.
     3. Each child log file contains the request time, response time, requested segment number, requested line number and requested line from the file.
     4. The parent job log contains the segment number, line number, request time and response time.
-##Implementation
+## Implementation
 utils
 The following are implemented in this file:
     1. struct shared memory. This contains:

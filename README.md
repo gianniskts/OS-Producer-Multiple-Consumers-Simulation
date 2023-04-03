@@ -25,8 +25,10 @@ Indicative execution: ./parent text.txt 10 10 5
     3. Each child log file contains the request time, response time, requested segment number, requested line number and requested line from the file.
     4. The parent job log contains the segment number, line number, request time and response time.
 ## Implementation
-utils
+utils:
+
 The following are implemented in this file:
+
     1. struct shared memory. This contains:
         a. The semPerSegMutex size (sem) * numberOfSegments semaphores table which contains one semaphores for each segment
         b. The FIFOmutex semaphore whose use is for children processes to be served in FIFO order

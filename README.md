@@ -71,6 +71,7 @@ void child(int segmentID, int numberOfRequests, int linesPerSegment, int numberO
     9. It prints the above times, the target segment and line numbers and finally the requested line to the log file
 
 parent
+
     1. Creates the shared memory
     2. Initializes the contents of the
         a. Semaphores

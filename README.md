@@ -70,7 +70,7 @@ void child(int segmentID, int numberOfRequests, int linesPerSegment, int numberO
     8. Calculates the request submission time and response time
     9. It prints the above times, the target segment and line numbers and finally the requested line to the log file
 
-parent
+parent:
 
     1. Creates the shared memory
     2. Initializes the contents of the

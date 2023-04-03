@@ -27,7 +27,7 @@ Indicative execution: ./parent text.txt 10 10 5
 ## Implementation
 utils:
 The following are implemented in this file:
-    1. struct shared memory. This contains:
+1. struct shared memory. This contains:
         a. The semPerSegMutex size (sem) * numberOfSegments semaphores table which contains one semaphores for each segment
         b. The FIFOmutex semaphore whose use is for children processes to be served in FIFO order
         c. The request semaphore
@@ -38,15 +38,15 @@ The following are implemented in this file:
         h. The integer segmentRequested, which indicates the requested number of segments
         i. The integer lineRequested, which indicates the requested number of the line
         j. The integer currentSegment, indicating the current number of the segment in the shared memory 
-    2. char*** start(char* argv, int linesPerSegment, int* numberOfLines, int* lengthOfLine)
+2. char*** start(char* argv, int linesPerSegment, int* numberOfLines, int* lengthOfLine)
         a. Returns to the parent the 3x3 array char*** arrayOfSegments[segment][linesOfSegment][line] which splits the input file into segments for a                cleaner and clearer implementation
         b. After the array is created and the input file is copied to it then it is deleted to avoid overloading the memory with unnecessary data
         c. Returns to the parent the variable numberOfLines which defines the maximum number of lines in the input file
         d. Returns to the parent the variable lengthOfLine which defines the maximum number of characters per line in the input file
 
-    3. int random_segment(int min, int max)
+3. int random_segment(int min, int max)
         a. Returns an integer in the range [min, max].
-    4. int random_line(int min, int max)
+4. int random_line(int min, int max)
         a. Returns an integer in the range [min,max)
 
 
